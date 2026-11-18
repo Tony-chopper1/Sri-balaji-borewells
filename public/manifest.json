@@ -1,0 +1,17 @@
+{
+  "name": "Sri Balaji Borewells",
+  "short_name": "Sri Balaji Borewells",
+  "description": "Complete Borewell Management & Depth Billing System",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ea580c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

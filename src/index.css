@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy-950: #080d1a;
+    --navy-900: #0f172a;
+    --navy-800: #1e293b;
+    --navy-700: #1e3a8a;
+    --navy-600: #1d4ed8;
+    --navy-500: #2563eb;
+    --cyan-500: #06b6d4;
+    --cyan-400: #22d3ee;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    min-height: 100vh;
+  }
+
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Specific Rules */
+@media print {
+  /* Hide interactive application navigation and UI elements */
+  nav, header.app-header, aside, .no-print, button:not(.allow-print), .sidebar-container {
+    display: none !important;
+  }
+
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+  }
+
+  /* Prevent page breaks inside table rows */
+  tr, .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tfoot {
+    display: table-footer-group !important;
+  }
+}
+
+/* 4x6 Inch Print Container Specifications */
+.print-page-4x6 {
+  width: 101.6mm;
+  min-height: 152.4mm;
+  padding: 4mm 5mm;
+  font-size: 9.5px;
+  line-height: 1.25;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* A4 Print Container Specifications */
+.print-page-a4 {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 12mm 15mm;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* A5 Print Container Specifications */
+.print-page-a5 {
+  width: 148mm;
+  min-height: 210mm;
+  padding: 8mm 10mm;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: #ffffff;
+}
